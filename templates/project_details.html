@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ project.title }} | Devfolio
+{% endblock %}
+
+
+{% block description %}
+{{ project.description }}
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section project-details-section">
+
+    <div class="container">
+
+        <!-- BACK -->
+
+        <a
+            href="{{ url_for('home') }}#projects"
+            class="back-link"
+        >
+            ← Back to Projects
+        </a>
+
+
+        <div class="project-details">
+
+
+            <!-- ==========================================
+                 PROJECT IMAGE
+            =========================================== -->
+
+            <div class="project-details-image">
+
+                {% if project.image_url %}
+
+                    <img
+                        src="{{ project.image_url }}"
+                        alt="{{ project.title }}"
+                    >
+
+                {% elif project.id == 1 %}
+
+                    <img
+                        src="{{ url_for('static', filename='images/projects/project-01.jpg') }}"
+                        alt="{{ project.title }}"
+                    >
+
+                {% elif project.id == 2 %}
+
+                    <img
+                        src="{{ url_for('static', filename='images/projects/project-02.jpg') }}"
+                        alt="{{ project.title }}"
+                    >
+
+                {% elif project.id == 3 %}
+
+                    <img
+                        src="{{ url_for('static', filename='images/projects/project-03.jpg') }}"
+                        alt="{{ project.title }}"
+                    >
+
+                {% else %}
+
+                    <div class="project-placeholder">
+                        <span>
+                            PROJECT
+                        </span>
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- ==========================================
+                 PROJECT INFORMATION
+            =========================================== -->
+
+            <div class="project-details-content">
+
+                <p class="section-label">
+                    PROJECT DETAILS
+                </p>
+
+
+                <h1 class="project-details-title">
+                    {{ project.title }}
+                </h1>
+
+
+                <p class="project-details-description">
+                    {{ project.description }}
+                </p>
+
+
+                <!-- TECHNOLOGIES -->
+
+                {% if project.technologies %}
+
+                <div class="project-details-tech">
+
+                    <h3>
+                        Technologies
+                    </h3>
+
+                    <p>
+                        {{ project.technologies }}
+                    </p>
+
+                </div>
+
+                {% endif %}
+
+
+                <!-- LINKS -->
+
+                <div class="project-details-links">
+
+
+                    {% if project.github_url %}
+
+                    <a
+                        href="{{ project.github_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn primary-btn"
+                    >
+                        GitHub ↗
+                    </a>
+
+                    {% endif %}
+
+
+                    {% if project.live_url %}
+
+                    <a
+                        href="{{ project.live_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn secondary-btn"
+                    >
+                        Live Demo ↗
+                    </a>
+
+                    {% endif %}
+
+
+                    <a
+                        href="{{ url_for('home') }}#projects"
+                        class="btn secondary-btn"
+                    >
+                        ← Back to Projects
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

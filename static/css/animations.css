@@ -1,0 +1,167 @@
+/* ==================================================
+   DEVFOLIO - ANIMATIONS
+================================================== */
+
+
+/* PAGE LOAD */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* HERO */
+
+.hero-content {
+    animation: slideRight 0.8s ease both;
+}
+
+
+.hero-build-card {
+    animation: fadeUp 0.9s ease 0.15s both;
+}
+
+
+/* SECTION */
+
+.section-heading {
+    animation: fadeUp 0.7s ease both;
+}
+
+
+/* PROJECTS */
+
+.project-card {
+    animation: fadeUp 0.6s ease both;
+}
+
+
+.project-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.19s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.26s;
+}
+
+
+/* SKILLS */
+
+.skill-card {
+    animation: fadeUp 0.5s ease both;
+}
+
+.skill-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.skill-card:nth-child(2) {
+    animation-delay: 0.10s;
+}
+
+.skill-card:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.skill-card:nth-child(4) {
+    animation-delay: 0.20s;
+}
+
+.skill-card:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.skill-card:nth-child(6) {
+    animation-delay: 0.30s;
+}
+
+.skill-card:nth-child(7) {
+    animation-delay: 0.35s;
+}
+
+.skill-card:nth-child(8) {
+    animation-delay: 0.40s;
+}
+
+
+/* PROJECT IMAGE */
+
+.project-image img {
+    transition:
+        transform 0.5s ease,
+        opacity 0.3s ease;
+}
+
+
+.project-image-link {
+    overflow: hidden;
+}
+
+
+/* BUTTON */
+
+.btn,
+.project-view-btn,
+.project-link {
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}

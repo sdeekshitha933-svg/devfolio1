@@ -1,0 +1,725 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Devfolio | Sai — AI & Full-Stack Developer
+{% endblock %}
+
+
+{% block description %}
+Sai's portfolio — AI, Machine Learning, Full-Stack Development, Flask and PostgreSQL.
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section id="home" class="hero">
+
+    <div class="container hero-content">
+
+
+        <!-- LEFT -->
+
+        <div class="hero-text">
+
+            <p class="small-heading">
+                AI • FULL STACK • BUILDER
+            </p>
+
+
+            <h1>
+                I build ideas
+                <br>
+                that <span>learn.</span>
+            </h1>
+
+
+            <h2>
+                Hi, I'm Sai.
+            </h2>
+
+
+            <p class="hero-description">
+                An AI & ML Engineering student exploring how
+                intelligent systems, thoughtful design and
+                real-world problems can come together.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#projects"
+                    class="btn primary-btn"
+                >
+                    Explore Projects
+                </a>
+
+                <a
+                    href="#contact"
+                    class="btn secondary-btn"
+                >
+                    Start a Conversation
+                </a>
+
+            </div>
+
+
+            <div class="hero-note">
+
+                <span class="note-line"></span>
+
+                <p>
+                    Currently turning curiosity into code.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT / BUILD LOOP -->
+
+        <div class="hero-card">
+
+            <div class="journey-card">
+
+
+                <div class="journey-top">
+
+                    <div>
+
+                        <p class="mini-label">
+                            MY BUILD LOOP
+                        </p>
+
+                        <h3>
+                            Think. Build. Learn.
+                        </h3>
+
+                    </div>
+
+                    <span class="journey-mark">
+                        ↗
+                    </span>
+
+                </div>
+
+
+                <div class="journey-path">
+
+
+                    <div class="journey-step active">
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h4>
+                                Think
+                            </h4>
+
+                            <p>
+                                Find the problem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="path-line"></div>
+
+
+                    <div class="journey-step">
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h4>
+                                Build
+                            </h4>
+
+                            <p>
+                                Turn ideas into systems.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="path-line"></div>
+
+
+                    <div class="journey-step">
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h4>
+                                Learn
+                            </h4>
+
+                            <p>
+                                Improve through every project.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="journey-footer">
+
+                    <span>
+                        CURRENT STACK
+                    </span>
+
+                    <p>
+                        Python · AI · Flask · PostgreSQL
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ABOUT
+================================================== -->
+
+<section id="about" class="section about-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                01 / ABOUT
+            </p>
+
+            <h2 class="section-title">
+                Learning technology
+                <br>
+                by building with it.
+            </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="about-main">
+
+                <p>
+                    I am an AI & ML Engineering student interested
+                    in creating applications that are not only
+                    technically interesting, but genuinely useful.
+                </p>
+
+                <p>
+                    I enjoy working across the stack — from Python
+                    and Machine Learning to Flask, PostgreSQL,
+                    JavaScript and frontend development.
+                </p>
+
+                <p>
+                    Every project is an opportunity to understand
+                    something new, solve a real problem and become
+                    a better builder.
+                </p>
+
+            </div>
+
+
+            <div class="about-side">
+
+
+                <!-- ROUND PROFILE -->
+
+                <div class="about-profile">
+
+                    <div class="profile-ring">
+
+                        <img
+                            src="{{ url_for('static', filename='images/profile/profile.jpg') }}"
+                            alt="Sai profile photo"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-item">
+
+                    <span>
+                        Focus
+                    </span>
+
+                    <strong>
+                        AI & Full Stack
+                    </strong>
+
+                </div>
+
+
+                <div class="about-item">
+
+                    <span>
+                        Backend
+                    </span>
+
+                    <strong>
+                        Flask
+                    </strong>
+
+                </div>
+
+
+                <div class="about-item">
+
+                    <span>
+                        Database
+                    </span>
+
+                    <strong>
+                        PostgreSQL
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     SKILLS
+================================================== -->
+
+<section id="skills" class="section skills-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                02 / SKILLS
+            </p>
+
+            <h2 class="section-title">
+                My toolkit for
+                <br>
+                turning ideas into reality.
+            </h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            {% for skill in skills %}
+
+            <div class="skill-card">
+
+                <span class="skill-number">
+                    {{ "%02d" | format(loop.index) }}
+                </span>
+
+                <h3>
+                    {{ skill.name }}
+                </h3>
+
+                {% if skill.category %}
+
+                <p>
+                    {{ skill.category }}
+                </p>
+
+                {% endif %}
+
+            </div>
+
+            {% else %}
+
+            <p class="empty-state">
+                No skills available yet.
+            </p>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PROJECTS
+================================================== -->
+
+<section id="projects" class="section projects-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                03 / PROJECTS
+            </p>
+
+            <h2 class="section-title">
+                Things I've built,
+                <br>
+                problems I've explored.
+            </h2>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+            {% for project in projects %}
+
+
+            <article class="project-card">
+
+
+                <!-- IMAGE -->
+
+                <div class="project-image">
+
+                    <a
+                        href="{{ url_for('project_details', project_id=project.id) }}"
+                        class="project-image-link"
+                    >
+
+                        {% if project.image_url %}
+
+                        <img
+                            src="{{ project.image_url }}"
+                            alt="{{ project.title }}"
+                            loading="lazy"
+                        >
+
+                        {% else %}
+
+                        <div class="project-image-placeholder">
+
+                            <span>
+                                PROJECT {{ "%02d" | format(loop.index) }}
+                            </span>
+
+                        </div>
+
+                        {% endif %}
+
+                    </a>
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div class="project-content">
+
+                    <div class="project-top">
+
+                        <p class="project-number">
+                            PROJECT {{ "%02d" | format(loop.index) }}
+                        </p>
+
+                        <h3 class="project-title">
+                            {{ project.title }}
+                        </h3>
+
+                        <p class="project-description">
+                            {{ project.description }}
+                        </p>
+
+                    </div>
+
+
+                    {% if project.technologies %}
+
+                    <p class="project-tech">
+                        {{ project.technologies }}
+                    </p>
+
+                    {% endif %}
+
+
+                    <div class="project-actions">
+
+                        <a
+                            href="{{ url_for('project_details', project_id=project.id) }}"
+                            class="project-view-btn"
+                        >
+                            View Project ↗
+                        </a>
+
+
+                        {% if project.github_url %}
+
+                        <a
+                            href="{{ project.github_url }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            GitHub ↗
+                        </a>
+
+                        {% endif %}
+
+
+                        {% if project.live_url %}
+
+                        <a
+                            href="{{ project.live_url }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            Live Demo ↗
+                        </a>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            {% else %}
+
+            <p class="empty-state">
+                No projects available yet.
+            </p>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CONTACT
+================================================== -->
+
+<section id="contact" class="section contact-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                04 / CONTACT
+            </p>
+
+            <h2 class="section-title">
+                Got an idea?
+                <br>
+                Let's make it real.
+            </h2>
+
+            <p class="section-description">
+                Have a project, collaboration idea or just want
+                to talk technology? Drop me a message.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info">
+
+
+                <div class="contact-item">
+
+                    <span>
+                        Availability
+                    </span>
+
+                    <p>
+                        Open to projects and collaborations.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>
+                        Focus
+                    </span>
+
+                    <p>
+                        AI · Full Stack · Machine Learning
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>
+                        Stack
+                    </span>
+
+                    <p>
+                        Python · Flask · PostgreSQL · JavaScript
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <form
+                id="contactForm"
+                class="contact-form"
+            >
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Your Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Tell me what you're building..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn primary-btn"
+                >
+                    Send Message ↗
+                </button>
+
+
+                <p
+                    id="formMessage"
+                    class="form-message"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+<script
+    src="{{ url_for('static', filename='js/main.js') }}"
+></script>
+
+<script
+    src="{{ url_for('static', filename='js/projects.js') }}"
+></script>
+
+<script
+    src="{{ url_for('static', filename='js/contact.js') }}"
+></script>
+
+{% endblock %}

@@ -1,0 +1,255 @@
+/* ==================================================
+   DEVFOLIO - RESPONSIVE DESIGN
+================================================== */
+
+
+/* ==================================================
+   TABLET
+   1000px and below
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .container {
+        width: min(100% - 40px, 900px);
+    }
+
+
+    /* NAVIGATION */
+
+    .main-nav {
+        gap: 22px;
+    }
+
+
+    /* HERO */
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .hero-build-card {
+        min-height: auto;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+
+    /* SKILLS */
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* PROJECTS */
+
+    .projects-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* CONTACT */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+
+    /* PROJECT DETAILS */
+
+    .project-details {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+   700px and below
+================================================== */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: min(100% - 32px, 600px);
+    }
+
+
+    /* NAVIGATION */
+
+    .nav-container {
+        min-height: 64px;
+    }
+
+    .main-nav {
+        gap: 14px;
+    }
+
+    .nav-link {
+        font-size: 0.72rem;
+    }
+
+    .logo {
+        font-size: 1.7rem;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        min-height: auto;
+        padding-top: 75px;
+        padding-bottom: 80px;
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 14vw, 5rem);
+    }
+
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-build-card {
+        padding: 30px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: clamp(2.5rem, 11vw, 4rem);
+    }
+
+
+    /* SKILLS */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PROJECT DETAILS */
+
+    .project-details-section {
+        padding-top: 80px;
+    }
+
+    .project-details-title {
+        font-size: 3rem;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+   480px and below
+================================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+
+    /* NAVIGATION */
+
+    .nav-container {
+        gap: 10px;
+    }
+
+    .main-nav {
+        gap: 9px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .nav-link {
+        font-size: 0.68rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+
+    /* HERO */
+
+    .hero-title {
+        font-size: 3.1rem;
+    }
+
+    .hero-build-card {
+        padding: 24px;
+    }
+
+    .hero-build-card h2 {
+        font-size: 3.3rem;
+    }
+
+
+    /* PROJECT */
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .project-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-view-btn,
+    .project-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /* PROJECT DETAILS */
+
+    .project-details-title {
+        font-size: 2.6rem;
+    }
+
+}
